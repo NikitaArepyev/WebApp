@@ -81,3 +81,9 @@ python -m bot.main
 - GitHub Pages хостит только Mini App (статические файлы).
 - Python-бот должен работать отдельно: локально, на Render или Railway.
 - Обновите TODO-ссылки LinkedIn и HH перед показом работодателю.
+
+## Деплой бота на Render
+
+- В проект добавлены `render.yaml` и `runtime.txt`.
+- Render поднимет **Background Worker** (не Web Service), установит зависимости из `requirements.txt` и запустит `python -m bot.main`.
+- Версия Python зафиксирована в `runtime.txt` (`python-3.12.8`), чтобы избежать проблем установки зависимостей на более новых версиях.
