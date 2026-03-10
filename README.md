@@ -84,6 +84,7 @@ python -m bot.main
 
 ## Деплой бота на Render
 
-- В проект добавлены `render.yaml` и `runtime.txt`.
+- В проект добавлены `render.yaml` и `.python-version`.
 - Render поднимет **Background Worker** (не Web Service), установит зависимости из `requirements.txt` и запустит `python -m bot.main`.
-- Версия Python зафиксирована в `runtime.txt` (`python-3.12.8`), чтобы избежать проблем установки зависимостей на более новых версиях.
+- Версия Python зафиксирована двумя способами: `PYTHON_VERSION=3.12.8` в `render.yaml` и `3.12.8` в `.python-version`.
+- `runtime.txt` оставлен для совместимости с платформами, где он поддерживается.
